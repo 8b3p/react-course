@@ -1,0 +1,23 @@
+.user-items {
+  padding: 0.5em;
+}
+
+.user-items li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  font-size: larger;
+  height: max-content;
+  padding: 0.3em 0;
+  border-top: 1px solid rgb(196, 196, 196);
+}
+
+.user-items li:nth-child(1) {
+  border-top: none;
+}
+
+.user-items li p {
+  margin: 0;
+}
