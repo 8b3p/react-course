@@ -19,7 +19,6 @@ function App() {
     })
   }
 
-  console.log(usersList)
   return (
     <div>
       <UserForm onAddUser={addUserHandler} />
