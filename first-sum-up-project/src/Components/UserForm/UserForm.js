@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import styles from './UserForm.module.css';
 import Card from '../UI/Card';
 import ErrorWindow from './ErrorWindow';
 
 const UserForm = props => {
-  const [enteredUserName, setEnteredUserName] = useState('');
-  const [enteredAge, setEnteredAge] = useState('');
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
+  
   const [error, setError] = useState();
-
-  const userNameChangeHandler = (event) => {
-    setEnteredUserName(event.target.value);
-  };
-
-  const ageChangeHandler = (event) => {
-    setEnteredAge(event.target.value);
-  };
 
   const submitHandler = (event) => {
     event.preventDefault();
+    const enteredUserName = nameInputRef.current.value;
+    const enteredAge = ageInputRef.current.value;
     if (enteredAge.trim().length === 0 || enteredUserName.trim().length === 0) {
       setError({
         title: 'Invalid Input',
@@ -47,8 +42,8 @@ const UserForm = props => {
       userName: enteredUserName,
       age: enteredAge
     });
-    setEnteredUserName('');
-    setEnteredAge('');
+    nameInputRef.current.value = '';
+    ageInputRef.current.value = '';
   };
 
   const onHandleError = event => {
@@ -56,18 +51,18 @@ const UserForm = props => {
   }
 
   return (
-    <div>
+    <>
       {error && <ErrorWindow onConfirm={onHandleError} title={error.title} message={error.message} />}
       <Card>
         <form className={styles['form-control']} onSubmit={submitHandler}>
           <label htmlFor="userName">User Name</label>
-          <input id='userName' type='text' value={enteredUserName} onChange={userNameChangeHandler}></input>
+          <input id='userName' type='text' ref={nameInputRef}></input>
           <label htmlFor="age">Age (Years)</label>
-          <input id="age" type='text' value={enteredAge} onChange={ageChangeHandler}></input>
+          <input id="age" type='text' ref={ageInputRef}></input>
           <button type='submit'>Sumbit</button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 
