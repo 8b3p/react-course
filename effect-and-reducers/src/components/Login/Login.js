@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from 'react';
 
 import Card from '../UI/Card/Card';
-import classes from './Login.module.css';
+import styles from './Login.module.css';
 import Button from '../UI/Button/Button';
 
 const emailReducer = (state, action) => {
@@ -70,9 +70,9 @@ const Login = (props) => {
   };
 
   return (
-    <Card className={classes.login}>
+    <Card className={styles.login}>
       <form onSubmit={submitHandler}>
-        <div className={`${classes.control} ${emailState.isValid === false ? classes.invalid : ''}`}>
+        <div className={`${styles.control} ${emailState.isValid === false ? styles.invalid : ''}`}>
           <label htmlFor="email">E-Mail</label>
           <input
             type="email"
@@ -82,7 +82,7 @@ const Login = (props) => {
             onBlur={validateEmailHandler}
           />
         </div>
-        <div className={`${classes.control} ${passwordState.isValid === false ? classes.invalid : ''}`}>
+        <div className={`${styles.control} ${passwordState.isValid === false ? styles.invalid : ''}`}>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -92,8 +92,8 @@ const Login = (props) => {
             onBlur={validatePasswordHandler}
           />
         </div>
-        <div className={classes.actions}>
-          <Button type="submit" className={classes.btn} disabled={!formIsValid}>
+        <div className={styles.actions}>
+          <Button type="submit" className={styles.btn} disabled={!formIsValid}>
             Login
           </Button>
         </div>
