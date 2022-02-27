@@ -1,0 +1,23 @@
+.heading {
+  transform: translateY(-150px);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5em !important;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+  background-color: #383838 !important;
+}
+
+.heading h1 {
+  margin-bottom: 1em;
+  font-size: 2.5rem;
+}
+
+.heading h3 {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}

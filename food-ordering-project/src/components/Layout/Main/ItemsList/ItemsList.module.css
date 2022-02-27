@@ -1,0 +1,9 @@
+.heading-card {
+  transform: translateY(-100px);
+  width: 100%;
+  padding: 1em 2em;
+}
+
+.heading-card ul {
+  padding: 0;
+}

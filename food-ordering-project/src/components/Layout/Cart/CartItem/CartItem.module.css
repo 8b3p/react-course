@@ -1,0 +1,47 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  border-bottom: 1px solid rgb(144, 144, 144);
+}
+
+.list-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.list-items span:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #a02e2e;
+  margin: auto 0;
+}
+
+.list-items span:last-child {
+  padding: 0.4em 0.6em;
+  border: 1px solid #afafaf;
+  border-radius: 15%;
+  font-weight: bold;
+}
+
+.list-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.list-buttons button {
+  width: 2em;
+  background-color: white;
+  color: #a02e2e;
+  border: 1px solid #a02e2e;
+  border-radius: 15%;
+  margin: 0.2em;
+  font-size: 1.5rem;
+}
+
+.list-buttons button:hover,
+.list-buttons button:active {
+  background-color: #a02e2e;
+  color: white;
+}

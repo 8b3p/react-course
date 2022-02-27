@@ -1,0 +1,54 @@
+.meal {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 1em 0;
+  border-bottom: 1px solid #a1a1a1;
+}
+
+.meal:last-child {
+  border-bottom: none;
+}
+
+.meal p:first-child {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.meal p:nth-child(2) {
+  margin: 0.5rem 0;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.meal p:last-child {
+  color: rgb(251, 73, 73);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.amount-form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.amount-form-control button {
+  background-color: #990000;
+  padding: 0.5em 2em;
+  margin-bottom: 1em;
+}
+
+.amount-form-control div label {
+  font-weight: 600;
+  margin: 0.5em;
+}
+
+.amount-form-control div input {
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font: inherit;
+  padding: 0.2rem 0.5rem;
+}
