@@ -17,7 +17,7 @@ const CartItem = props => {
   return (
     <li className={styles['list']}>
       <div style={{'width': '35%'}}>
-        <h2>{props.item.name} <br /></h2>
+        <h2>{props.item.name}</h2>
         <div className={styles['list-items']}>
           <span>${props.item.price} </span>
           <span>X {props.item.amount}</span>
